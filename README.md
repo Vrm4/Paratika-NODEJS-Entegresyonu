@@ -28,7 +28,7 @@ Paratikada işlem yapabilmek için token talep etmeliyiz ve bu token bizden zoru
 6. RETURNURL => İşlem sonrasında kullanıcının gönderileceği alan 
 7. MERCHANTPAYMENTID => Ödeme/sipariş kodu bu alanın benzersiz bir id olacağını unutmayın bunu yazılım tarafında ele alacağız
 8. AMOUNT => Ödenecek para miktarı bu mikrata kdv dahil değildir ( gönderilecek para miktarı tipi => 15.00 )
-9. CURRENCY => Para kodu, hangi para birimi ile ödeme yapılacağını buradan belirtmelisiniz (TRY,USD), desteklenen bütün para birimleri için ** https://vpos.paratika.com.tr/paratika/api/v2/doc#session ** alanındaki CURRENCY alanına bakmalısınız.
+9. CURRENCY => Para kodu, hangi para birimi ile ödeme yapılacağını buradan belirtmelisiniz (TRY,USD), desteklenen bütün para birimleri için **https://vpos.paratika.com.tr/paratika/api/v2/doc#session** alanındaki CURRENCY alanına bakmalısınız.
 10. CUSTOMER => Müşteri numarası alanı bu alanında benzersiz id olması gerektiğini ve MERCHANTPAYMENTID ile aynı olmaması gerektiğini unutmayın.
 11. CUSTOMEREMAIL => Müşteri e-mail adresi 
 12. CUSTOMERNAME => Müşteri Adı 
