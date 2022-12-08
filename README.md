@@ -35,15 +35,12 @@ Paratikada işlem yapabilmek için token talep etmeliyiz ve bu token bizden zoru
 13. CUSTOMERPHONE => Müşteri Telefon Numarası 
 14. CUSTOMERIP => Müşteri İp Adresi 
 15. ORDERITEMS => Ödeme yapılan ürün veya herhangi bir şey için gerekli detayları barındıran json verisi detayları kod tarafında göreceğiz 
-Örnek orderitems json verisi: 
-ORDERITEMS:  [ 
-        { 
-            "productCode": "T00D3AITCC", 
-            "name": "Galaxy Note 3", 
-            "description": "Description of Galaxy Note 3", 
-            "quantity": 2, 
-            "amount": 449.99
-        }, 
-       ]
 
+### Nodojs Kodları 
+
+#### Projemizi Kuralım 
+```
+npm init -y 
+```
+#### 
 
