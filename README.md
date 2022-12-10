@@ -42,5 +42,49 @@ Paratikada işlem yapabilmek için token talep etmeliyiz ve bu token bizden zoru
 ```
 npm init -y 
 ```
-#### 
+#### Paket Kurulumlarını Yapalım 
+
+##### ExpressJs Paketi
+Express Js paketini sistemden gelen verileri dinlemek için kullanacağız 
+
+```
+npm install express
+```
+##### Axios Paketi
+Axios paketini kuralım, axios paketini post gönderme işlemleri için kullanacağız
+```
+npm install axios
+```
+
+#### Server Başlatılması Ve Html Tarafı 
+
+index.js
+```
+const express = require('express')
+const app = express()
+
+app.use(express.static('public'))
+
+app.listen(3030 , () =>{
+    console.log('server working')
+})
+```
+Burada 3030 portunda çalışacak serverı kuruyorum ve dosylarımızın içerisine açacağımız public dosyasının server çalıştırıldığında gösterilmesini söylüyoruz , public klasörürnün içerisinde ise html tarafı olacak. Son aşamada klasör yapısı şu şekildedir:
+
+```
+|- node_modules
+|- pulic
+  |-- html dosyalari
+|-index.js
+|-package-lock.json
+|-package.json
+```
+
+## Html İle Form Oluşturma Kısmı
+
+Evet şimdi kullanıcıdan session token için istenen alanların bulunduğu bir form alanı oluşturacağız bu form alanından gelen verileri axios ile backend kısmına gönderip sonrasında backend kısmında yakaladıktan sonra yine axios ile paratika sistemine göndericeğiz 
+
+Şimdi public klasörünün içerisine index.html ve index.js sayfalarını oluşturuyoruz, index.html sayfasi session token için gerekli bilgileri alacak sonrasında diğer sayfada ise kullanıcıdan kart bilgileri alınıp 3d secure sayfasına gönderilecek, tabiki istediğinize göre bütün bilgileri tek sayfadada tamamlaya bilirsiniz lakin biz burada 2 sayfada yapacağız.
+
+
 
