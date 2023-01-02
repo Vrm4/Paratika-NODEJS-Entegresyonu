@@ -87,5 +87,8 @@ Evet şimdi kullanıcıdan session token için istenen alanların bulunduğu bir
 
 Şimdi public klasörünün içerisine index.html ve index.js sayfalarını oluşturuyoruz, index.html sayfasi session token için gerekli bilgileri alacak sonrasında diğer sayfada ise kullanıcıdan kart bilgileri alınıp 3d secure sayfasına gönderilecek, tabiki istediğinize göre bütün bilgileri tek sayfadada tamamlaya bilirsiniz lakin biz burada 2 sayfada yapacağız.
 
+index.html sayfasındaki form bilgilerini index.js ile alıyoruz ve backend kısmına gönderiyoruz sonrsında ise token talebi için post işlemleri gerçekleşiyor, kod tarafında yorum satırları ile açıklamaya çalıştım lütfen bakınız :
+
+
 
 
