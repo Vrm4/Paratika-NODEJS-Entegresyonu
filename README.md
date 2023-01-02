@@ -89,6 +89,9 @@ Evet şimdi kullanıcıdan session token için istenen alanların bulunduğu bir
 
 index.html sayfasındaki form bilgilerini index.js ile alıyoruz ve backend kısmına gönderiyoruz sonrsında ise token talebi için post işlemleri gerçekleşiyor, kod tarafında yorum satırları ile açıklamaya çalıştım lütfen bakınız :
 
+Backend => [index.js]([https://link-url-here.org](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/main/index.js))
+index.html => [index.html]([https://link-url-here.org](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/main/public/index.html))
+Form alanindaki verileri backende gönderen js sayfası => [index.js]([https://link-url-here.org](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/main/public/index.js))
 
 
 
