@@ -67,10 +67,13 @@ app.post('/get-form' ,(req,res) =>{
             }
         )
         .then((result) => {
+            res.sendStatus(200)
+            /*
             // hata yoksa frontend tarafında session tokenı gönderiyoruz 
             if (result.data.responseCode === '00'){
                 res.send({sessionToken : result.data.sessionToken})
             }
+            */
         })
         .catch((err) => console.log(err))
     }
