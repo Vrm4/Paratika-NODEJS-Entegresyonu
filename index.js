@@ -66,7 +66,12 @@ app.post('/get-form' ,(req,res) =>{
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }
         )
-        .then((result) => console.log(result))
+        .then((result) => {
+            // hata yoksa frontend tarafında session tokenı gönderiyoruz 
+            if (result.data.responseCode === '00'){
+                res.send({sessionToken : result.data.sessionToken})
+            }
+        })
         .catch((err) => console.log(err))
     }
     process()

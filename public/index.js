@@ -16,6 +16,32 @@ form.addEventListener('submit' , (e) =>{
     }
     // axios paketi ile birlikte veriyi backend kımına gönderiyoruz
     axios.post('/get-form' , data)
-    .then(() => alert('basarili'))
+    .then((res) => {
+        // token değerine erişiyoruz
+        const token = res.data.sessionToken
+        //token değerini cookie ile tutuyoruz 
+        document.cookie = `sessionToken_paratika=${token} ; path=/`
+        setTimeout(() => {
+            window.location.href = '/card.html'
+        }, 200);
+    })
     .catch(() => alert('bir hata olustu'))
 })
+
+// cookie durumunu sorgulamak için
+function checkCookie(cookieName){
+    const query = document.cookie.split('; ')
+    .some(item => item.trim().startsWith(`${cookieName}=`))
+    return query
+}
+//ilgili cookie'i silmek için
+function deleteCookie(){
+    document.cookie = `sessionToken_paratika=; expires = Thu, 01 Jan 1970 00:00:00 GTM; path=/`
+}
+// cookie değerini almak için
+function getValueOfCookie(value){
+    const cookies = document.cookie.split(';')
+    .find( item => item.trim().startsWith(`${value}=`))
+    ?.split('=')[1]   
+    return cookies 
+}
