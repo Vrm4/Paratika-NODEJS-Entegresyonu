@@ -94,4 +94,20 @@ index.html sayfasındaki form bilgilerini index.js ile alıyoruz ve backend kıs
 #### index.html => [index.html](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/main/public/index.html)
 #### Form alanindaki verileri backende gönderen js sayfası => [index.js](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/main/public/index.js)
 
+/public/index.js sayfası tamamen ilk aşamada session token için gerekli bilgileri alıyor ve backend kısmına gönderiyor sonrasında [backend kısmında](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/8ce39479c153b1d3e4cfeda4b8b358c91af11fbb/index.js#L14) session token için gerekli post işlemleri gerçekleştiriliyor ve front-end kısmında token değeri session olarak atanıp kullanıcı kart bilgilerini girmesi için cart.html sayfasına yönlendiriliyor.
+
+## Kart Bilgileri İçin Gerekli Form Alanı 
+
+Session tokenı aldıktan sonra kullanıcıyı kart bilgileri girmesi için cart.html sayfasına yönlendiriyoruz sonrasında kullanıcın girdiği bilgiler doğru ise kullanıcı 3d secure sayfasına gönderilecek lakin unutmayın test ortamında bunları yaptığımız için gerçek kartları değil paratikanın verdiği test kartlarını kullanmalısınız. 
+
+!! card.js sayfasında sadece session tokenı form alanının action alanına ekliyoruz 
+[backend kısmında](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/main/public/card.html)
+
+Bu sayfada gördürğünüz bilgiler ile 3d secure sayfası açılacak ve kullanıcının telefonuna gelen şifrenin girilmesi istenecek sonrasında sistem kullanıcıyı bizim belirttiğimiz url gönderecek.
+
+## Son Aşama Ödeme Alınması
+
+Kullanıcı bizim belirttiğimiz url adresine yönlendirildiğinde sessionToken ve auth3dToken ile yönlendirilecek card.html sayfasında savecard alanını true olarak gönderdiğimiz için kullanıcının kart bilgiler ibu tokenlarda saklı olacak sonrasında sadece sessionToken, action , auth3dToken bilgilerini göndererek ödemeyi almış olacağız 
+
+Kullanıcıdan gelen bilgileri yakalamak ve ödeme almak için lütfen [Bakınız](https://github.com/Vrm4/Paratika-NODEJS-Entegresyonu/blob/8ce39479c153b1d3e4cfeda4b8b358c91af11fbb/index.js#L79)
 
