@@ -19,7 +19,7 @@ Paratikada işlem yapabilmek için token talep etmeliyiz ve bu token bizden zoru
 
 ### İstenen Zorunlu Parametreler
 
-**Not: Paratika hesabınıza giriş yaptıktan sonra kullanıcılar alanında bir merchant api user oluşturmanız gerekmektedir,paratika test kartları sunmaktadır lakin test kullanıcı(mağaza) sunmamaktadır ,(TEST KARTLARI)['https://vpos.paratika.com.tr/paratika/api/v2/doc#test-cards']
+**Not: Paratika hesabınıza giriş yaptıktan sonra kullanıcılar alanında bir merchant api user oluşturmanız gerekmektedir,paratika test kartları sunmaktadır lakin test kullanıcı(mağaza) sunmamaktadır , [TEST KARTLARI](https://vpos.paratika.com.tr/paratika/api/v2/doc#test-cards)
 
 1. ACTION:SESSIONTOKEN => Action alani yapmak istediğimiz işlemi girdiğimiz alandır şuan session token talep edeceğiz
 2. MERCHANTUSER => Paratika Mağaza Kullanıcısı
