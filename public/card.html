@@ -19,18 +19,18 @@
 </head>
 <body>
     <div class="main">
-        <form id="firs-post">
+        <form id="firs-post" action="" method="post">
             <div class="form-group">
               <label for="exampleInputEmail1">Kart Numarası</label>
-              <input type="number" class="form-control"   placeholder="5xxxxxxxxxxxxxxx">
+              <input type="number" class="form-control"   placeholder="5xxxxxxxxxxxxxxx" name="pan" maxlength="19">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Kart Üzerindeki Ad Ve Soyad</label>
-                <input type="text" class="form-control"   placeholder="Rıdvan Demirhan">
+                <input type="text" class="form-control"   placeholder="Rıdvan Demirhan" name="cardOwner" maxlength="32">
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">Son Kullanma Tarihi (Ay)</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="exampleFormControlSelect1" name="expiryMonth">
                 <option value="01">01</option>
                 <option value="02">01</option>
                 <option value="03">01</option>
@@ -47,7 +47,7 @@
             </div>
             <div class="form-group">
               <label for="exampleFormControlSelect1">Son Kullanma Tarihi (Yıl)</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" id="exampleFormControlSelect1" name="expiryYear">
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
                 <option value="2025">2025</option>
@@ -66,8 +66,13 @@
             </div>
           <div class="form-group">
             <label for="exampleInputEmail1">CVV</label>
-            <input type="number" class="form-control" placeholder="333">
+            <input class="form-control" type="password" name="cvv" placeholder="CVV" maxlength="4">
           </div>
+          <input type="hidden" name="saveCard" value="yes" />
+          <input type="hidden" name="cardName" placeholder="Card Name"/>
+          <input type="hidden" name="cardCutoffDay" placeholder="Card Cutoff Day"/>
+          <input type="hidden" name="installmentCount" placeholder="Installment Count"/>
+          <input type="hidden" name="points" />
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
     </div>

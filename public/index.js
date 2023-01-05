@@ -17,15 +17,15 @@ form.addEventListener('submit' , (e) =>{
     // axios paketi ile birlikte veriyi backend kımına gönderiyoruz
     axios.post('/get-form' , data)
     .then((res) => {
-        /*
+        
         // token değerine erişiyoruz
         const token = res.data.sessionToken
         //token değerini cookie ile tutuyoruz 
         document.cookie = `sessionToken_paratika=${token} ; path=/`
-        */
+        // kart bilgileri için yönlendirme 
         setTimeout(() => {
             window.location.href = '/card.html'
-        }, 200);
+        }, 1000);
     })
     .catch(() => alert('bir hata olustu'))
 })

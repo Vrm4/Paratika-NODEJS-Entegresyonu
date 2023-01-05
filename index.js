@@ -67,23 +67,38 @@ app.post('/get-form' ,(req,res) =>{
             }
         )
         .then((result) => {
-            res.sendStatus(200)
-            /*
             // hata yoksa frontend tarafında session tokenı gönderiyoruz 
             if (result.data.responseCode === '00'){
                 res.send({sessionToken : result.data.sessionToken})
-            }
-            */
+            }  
         })
         .catch((err) => console.log(err))
     }
     process()
 })
 app.post('/return' , (req,res) => {
-    res.send(JSON.stringify(req.body))
-    console.log(req.body)
-})
+    // 3d secure sonrasında kullanıcı bu sayfaya yönlendirilecek ve bu sayfaya
+    // 3d secureden sonuçlar post ile gelecek burada sonuçları yakalayıp ödeme işlemini gerçekleştireceğiz
 
+    // bir hata durumu yoksa ödeme yapılacak 
+    // son aşamada sadece sistemin bize gönderdiği session token , hangi işlemin yapılacağı ve auth3Dtoken değerini göndereceğiz
+    // aşağıda göründüğü gibi 3 değeri göndermemiz bizim için yeterli bir hata dönmezse ödeme başarılı yazısını göstereceğiz
+    if(req.body.responseCode === '00'){
+        let resultData = `SESSIONTOKEN=${req.body.sessionToken}&ACTION=SALE&AUTH3DTOKEN=${req.body.auth3DToken}`
+        
+        axios.post('https://vpos.paratika.com.tr/paratika/api/v2',
+        resultData,
+        {
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+        .then((result) =>{ 
+            res.redirect('/information.html')
+        })
+        .catch((err) =>{
+            console.log('Ödeme Başarısız')
+        })
+    }
+})
 app.listen(3030 , () =>{
     console.log('server working')
 })
