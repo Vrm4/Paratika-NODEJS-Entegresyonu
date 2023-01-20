@@ -1,5 +1,4 @@
-# Paratika-NODEJS-Entegresyonu 
-# !! Yazı Bitmemiştir 
+# Paratika-NODEJS-Entegresyonu
 
 Merhabalar, maalesef ülkemizde nodejs ile alakalı kaynaklar oldukça kısıtlı bundan dolayı bu konu hakkında bir makale yazmanın sağlıklı olacağı düşüncesine vardım , bu yazımda [Paratika](https://www.paratika.com.tr/) sanal pos entegrasyonu ile çalışacağız, iyi okumalar.
 
