@@ -18,7 +18,7 @@ app.post('/get-form' ,(req,res) =>{
     |---Gerekli bilgileri değişkenlere atıyoruz ----|
      */ 
     // mağaza numarası 
-    const merchant = 100658785
+    const merchant = 130658469
     // mağaza kullanıcı adı (mail) 
     const merchantUser = 'api'
     // mağaza şifresi
